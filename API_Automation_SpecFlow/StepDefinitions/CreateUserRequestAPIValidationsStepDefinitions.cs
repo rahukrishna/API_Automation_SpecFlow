@@ -26,8 +26,7 @@ namespace API_Automation_SpecFlow.StepDefinitions
         {
             string bodyData = Helpers.BodyData.createRequestData(name, job);
             request.AddBody(bodyData);
-            request.RequestFormat = DataFormat.Json;
-            restclient = new RestClient(Helpers.Helpers.getBaseURL());
+            request.RequestFormat = DataFormat.Json;            
            
         }
 

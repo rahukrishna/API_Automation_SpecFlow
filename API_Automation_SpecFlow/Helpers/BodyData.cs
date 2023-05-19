@@ -14,5 +14,11 @@ namespace API_Automation_SpecFlow.Helpers
             return js;
         }
 
+        public static string updateRequestData(string name, string job)
+        {
+            var js = "{\"name\": \"" + name + "\", \"job\": \"" + job + "\"}";
+            return js;
+        }
+
     }
 }

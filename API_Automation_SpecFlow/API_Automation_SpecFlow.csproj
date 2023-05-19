@@ -7,7 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <UpToDateCheckInput Remove="features\createReq.feature" />
+    <UpToDateCheckInput Remove="features\PatchUser.feature" />
+    <UpToDateCheckInput Remove="features\UpdateUsers.feature" />
   </ItemGroup>
 
   <ItemGroup>

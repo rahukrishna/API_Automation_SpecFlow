@@ -25,5 +25,10 @@ namespace API_Automation_SpecFlow.Helpers
         {
             return "api/users";
         }
+
+        public static string updateUserReq()
+        {
+            return "api/users/2";
+        }
     }
 }
