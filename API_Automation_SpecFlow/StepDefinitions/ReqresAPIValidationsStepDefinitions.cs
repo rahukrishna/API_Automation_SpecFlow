@@ -1,9 +1,8 @@
-using System;
 using RestSharp;
 using NUnit.Framework;
-using TechTalk.SpecFlow;
 using API_Automation_SpecFlow.Models;
 using Newtonsoft.Json;
+
 
 namespace API_Automation_SpecFlow.StepDefinitions
 {
@@ -19,8 +18,9 @@ namespace API_Automation_SpecFlow.StepDefinitions
         [Given(@"Want to know the users list")]
         public void GivenWantToKnowTheUsersList()
         {
-            request = new RestRequest(Helpers.getListUserUrl(), Method.Get);
-            restclient = new RestClient(Helpers.getBaseURL());
+           
+            request = new RestRequest(Helpers.Helpers.getListUserUrl(), Method.Get);
+            restclient = new RestClient(Helpers.Helpers.getBaseURL());
         }
 
         [When(@"I retrive the data of users list")]
@@ -44,8 +44,8 @@ namespace API_Automation_SpecFlow.StepDefinitions
         [Given(@"Iwant to get single user details")]
         public void GivenIwantToGetSingleUserDetails()
         {
-            request = new RestRequest(Helpers.getSingleUserUrl(), Method.Get);
-            restclient = new RestClient(Helpers.getBaseURL());
+            request = new RestRequest(Helpers.Helpers.getSingleUserUrl(), Method.Get);
+            restclient = new RestClient(Helpers.Helpers.getBaseURL());
         }
 
         [When(@"I retrivee data for a single user")]
@@ -59,6 +59,24 @@ namespace API_Automation_SpecFlow.StepDefinitions
         {
             Assert.AreEqual(response.StatusCode.ToString(), "OK");
             var listResponse = JsonConvert.DeserializeObject<SingleUserResponse>(response.Content.ToString());
+
+
+            
+        }
+
+        public void postreq()
+        {
+
+            string js = "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"leader\"\r\n}";
+
+            request = new RestRequest("api/users", Method.Post);
+            request.AddBody(js);
+            request.RequestFormat = DataFormat.Json;
+            restclient = new RestClient(Helpers.Helpers.getBaseURL());
+            response = restclient.Execute(request);
+
+
+
         }
 
     }
