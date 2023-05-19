@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "sQoZtt9ECyp/lVh3pyZA1DWGy/0tvEghfgcYX2H91YeKxydFywEJl1dALUja5qjkegbGknVqxNbU3YqNSJAEQg==",
+  "dgSpecHash": "8tl0hKPKDD3ff5Wns4idTQ0SgFAKxDX8HCQEbdRlGtNoIPnKcozr39VTZtgYboigFeNXWAw6dJqw8H22pG/2QQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\USER\\source\\repos\\API_Automation_SpecFlow\\API_Automation_SpecFlow\\API_Automation_SpecFlow.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\USER\\.nuget\\packages\\bodi\\1.5.0\\bodi.1.5.0.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\customizedjsonformatter\\1.0.1\\customizedjsonformatter.1.0.1.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\fluentassertions\\6.2.0\\fluentassertions.6.2.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\gherkin\\19.0.3\\gherkin.19.0.3.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\microsoft.codecoverage\\17.0.0\\microsoft.codecoverage.17.0.0.nupkg.sha512",
@@ -95,5 +96,16 @@
     "C:\\Users\\USER\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\USER\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'CustomizedJsonFormatter 1.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "CustomizedJsonFormatter",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

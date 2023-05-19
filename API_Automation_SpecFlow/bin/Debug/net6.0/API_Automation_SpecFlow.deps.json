@@ -8,6 +8,7 @@
     ".NETCoreApp,Version=v6.0": {
       "API_Automation_SpecFlow/1.0.0": {
         "dependencies": {
+          "CustomizedJsonFormatter": "1.0.1",
           "FluentAssertions": "6.2.0",
           "Microsoft.NET.Test.Sdk": "17.0.0",
           "NUnit3TestAdapter": "4.1.0",
@@ -29,6 +30,7 @@
           }
         }
       },
+      "CustomizedJsonFormatter/1.0.1": {},
       "FluentAssertions/6.2.0": {
         "dependencies": {
           "System.Configuration.ConfigurationManager": "4.5.0"
@@ -1057,6 +1059,13 @@
       "sha512": "sha512-CzIPzdIAFSd2zuLxI+0K9s48Qv3HQDbWiApn9h96j284rHs2bSPrn/PMca3mi4q3xLSEqOp+GUJ6+mXDD9prKg==",
       "path": "bodi/1.5.0",
       "hashPath": "bodi.1.5.0.nupkg.sha512"
+    },
+    "CustomizedJsonFormatter/1.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-N5yUNQ2qa2SuhRtjPsjzqnmV5mdgQQSU1fJl3xsmKYoa3lNmJbEpW5IOnz4wkucovMrkaIYunAoEEBpvTr1L+g==",
+      "path": "customizedjsonformatter/1.0.1",
+      "hashPath": "customizedjsonformatter.1.0.1.nupkg.sha512"
     },
     "FluentAssertions/6.2.0": {
       "type": "package",

@@ -18,6 +18,15 @@
           "build/_._": {}
         }
       },
+      "CustomizedJsonFormatter/1.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/CustomizedJsonFormatter.dll": {}
+        },
+        "runtime": {
+          "lib/CustomizedJsonFormatter.dll": {}
+        }
+      },
       "FluentAssertions/6.2.0": {
         "type": "package",
         "dependencies": {
@@ -1757,6 +1766,36 @@
         "lib/netstandard2.0/BoDi.dll",
         "lib/netstandard2.0/BoDi.pdb",
         "tools/_._"
+      ]
+    },
+    "CustomizedJsonFormatter/1.0.1": {
+      "sha512": "N5yUNQ2qa2SuhRtjPsjzqnmV5mdgQQSU1fJl3xsmKYoa3lNmJbEpW5IOnz4wkucovMrkaIYunAoEEBpvTr1L+g==",
+      "type": "package",
+      "path": "customizedjsonformatter/1.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "CustomizedJsonFormatter.cs",
+        "CustomizedJsonFormatter.csproj",
+        "Properties/AssemblyInfo.cs",
+        "bin/Debug/CustomizedJsonFormatter.dll",
+        "bin/Debug/CustomizedJsonFormatter.pdb",
+        "bin/Release/CustomizedJsonFormatter.dll",
+        "bin/Release/CustomizedJsonFormatter.pdb",
+        "customizedjsonformatter.1.0.1.nupkg.sha512",
+        "customizedjsonformatter.nuspec",
+        "lib/CustomizedJsonFormatter.dll",
+        "nuget.exe",
+        "obj/Debug/CustomizedJsonFormatter.csproj.FileListAbsolute.txt",
+        "obj/Debug/CustomizedJsonFormatter.csprojResolveAssemblyReference.cache",
+        "obj/Debug/CustomizedJsonFormatter.dll",
+        "obj/Debug/CustomizedJsonFormatter.pdb",
+        "obj/Debug/DesignTimeResolveAssemblyReferencesInput.cache",
+        "obj/Release/CustomizedJsonFormatter.csproj.FileListAbsolute.txt",
+        "obj/Release/CustomizedJsonFormatter.csprojResolveAssemblyReference.cache",
+        "obj/Release/CustomizedJsonFormatter.dll",
+        "obj/Release/CustomizedJsonFormatter.pdb",
+        "obj/Release/DesignTimeResolveAssemblyReferencesInput.cache"
       ]
     },
     "FluentAssertions/6.2.0": {
@@ -5931,6 +5970,7 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "CustomizedJsonFormatter >= 1.0.1",
       "FluentAssertions >= 6.2.0",
       "Microsoft.NET.Test.Sdk >= 17.0.0",
       "NUnit3TestAdapter >= 4.1.0",
@@ -5980,6 +6020,10 @@
       "net6.0": {
         "targetAlias": "net6.0",
         "dependencies": {
+          "CustomizedJsonFormatter": {
+            "target": "Package",
+            "version": "[1.0.1, )"
+          },
           "FluentAssertions": {
             "target": "Package",
             "version": "[6.2.0, )"
@@ -6032,5 +6076,17 @@
         "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'CustomizedJsonFormatter 1.0.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8, .NETFramework,Version=v4.8.1' instead of the project target framework 'net6.0'. This package may not be fully compatible with your project.",
+      "libraryId": "CustomizedJsonFormatter",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

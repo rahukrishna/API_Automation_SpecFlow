@@ -2,6 +2,8 @@ using System;
 using RestSharp;
 using NUnit.Framework;
 using TechTalk.SpecFlow;
+using API_Automation_SpecFlow.Models;
+using Newtonsoft.Json;
 
 namespace API_Automation_SpecFlow.StepDefinitions
 {
@@ -12,14 +14,13 @@ namespace API_Automation_SpecFlow.StepDefinitions
         private RestClient restclient;
         private RestRequest request;
         private RestResponse response;
-        string url = "https://reqres.in/";
 
 
         [Given(@"Want to know the users list")]
         public void GivenWantToKnowTheUsersList()
         {
-            request = new RestRequest("api/users?page=2", Method.Get);
-            restclient = new RestClient(url);
+            request = new RestRequest(Helpers.getListUserUrl(), Method.Get);
+            restclient = new RestClient(Helpers.getBaseURL());
         }
 
         [When(@"I retrive the data of users list")]
@@ -32,7 +33,33 @@ namespace API_Automation_SpecFlow.StepDefinitions
         [Then(@"Users list should contain some value")]
         public void ThenUsersListShouldContainSomeValue()
         {
+            //LocationResponse locationResponse = new JsonDeserializer().Deserialize<LocationResponse>(restResponse);
+            var listResponse =  JsonConvert.DeserializeObject<ListUserResponse>(response.Content.ToString());
             Assert.AreEqual(response.StatusCode.ToString(), "OK");
+            Assert.IsNotNull(listResponse);
+            Assert.IsNotNull(listResponse.per_page);
+            Assert.IsNotNull(listResponse.page);
+            
         }
+        [Given(@"Iwant to get single user details")]
+        public void GivenIwantToGetSingleUserDetails()
+        {
+            request = new RestRequest(Helpers.getSingleUserUrl(), Method.Get);
+            restclient = new RestClient(Helpers.getBaseURL());
+        }
+
+        [When(@"I retrivee data for a single user")]
+        public void WhenIRetriveeDataForASingleUser()
+        {
+            response = restclient.Execute(request);
+        }
+
+        [Then(@"I should get the details of singke user")]
+        public void ThenIShouldGetTheDetailsOfSingkeUser()
+        {
+            Assert.AreEqual(response.StatusCode.ToString(), "OK");
+            var listResponse = JsonConvert.DeserializeObject<SingleUserResponse>(response.Content.ToString());
+        }
+
     }
 }
